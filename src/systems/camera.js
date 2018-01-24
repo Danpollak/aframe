@@ -51,8 +51,8 @@ module.exports.System = registerSystem('camera', {
     cameraRigEl.setAttribute(DEFAULT_CAMERA_ATTR, '');
     cameraRigEl.appendChild(defaultCameraEl);
     sceneEl.appendChild(cameraRigEl);
-    sceneEl.addEventListener('enter-vr', this.removeDefaultOffset);
-    sceneEl.addEventListener('exit-vr', this.addDefaultOffset);
+    // sceneEl.addEventListener('enter-vr', this.removeDefaultOffset);
+    // sceneEl.addEventListener('exit-vr', this.addDefaultOffset);
     sceneEl.emit('camera-ready', {cameraEl: defaultCameraEl});
   },
 

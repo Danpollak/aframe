@@ -165,7 +165,7 @@ module.exports.Component = registerComponent('tracked-controls', {
 
     // Apply transforms, if 6DOF and in VR.
     if (vrDisplay) {
-      standingMatrix = this.el.sceneEl.renderer.vr.getStandingMatrix();
+      standingMatrix = this.el.sceneEl.camera.parent.matrix;
       object3D.matrixAutoUpdate = false;
       object3D.matrix.compose(object3D.position, object3D.quaternion, object3D.scale);
       object3D.matrix.multiplyMatrices(standingMatrix, object3D.matrix);
